@@ -13,13 +13,14 @@ import coil.compose.rememberAsyncImagePainter
 fun ImageComponent(
     imageUrl: String,
     modifier: Modifier = Modifier
-        .size(250.dp)
+        .size(400.dp)
         .padding(16.dp)
 ) {
     Image(
         painter = rememberAsyncImagePainter(imageUrl),
         contentDescription = "Dog Image",
         modifier = modifier,
-        contentScale = ContentScale.Inside
+        contentScale = ContentScale.Crop
+
     )
 }
